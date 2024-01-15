@@ -33,7 +33,7 @@ listContainer.addEventListener("keypress", function (e) {
   if (e.key === "Enter")  {
     addTask();
   }
-});
+}); // fix this enter button 
 
 
 
