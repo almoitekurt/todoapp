@@ -29,11 +29,11 @@ listContainer.addEventListener("click", function(e) {
 }, false);
 
 
-listContainer.addEventListener("keypress", function (e) {
+inputBox.addEventListener("keypress", function (e) {
   if (e.key === "Enter")  {
     addTask();
   }
-}); // fix this enter button first
+}); 
 
 
 
