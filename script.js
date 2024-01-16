@@ -5,13 +5,19 @@ function addTask(){
         alert("Error, write a task!");
     }
     else {
+
+        let currentDate = new Date().toLocaleDateString();
+        let taskWithDate = `${inputBox.value}: ${currentDate}`;  // prints out tasks and date
+
         let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
+        li.innerHTML = taskWithDate;
         listContainer.appendChild(li);
+
         let span = document.createElement("span");
         span.innerHTML ="\u00d7";
         li.appendChild(span);
     }
+
     inputBox.value = ""; 
     saveData();
 
@@ -29,7 +35,7 @@ listContainer.addEventListener("click", function(e) {
 }, false);
 
 
-inputBox.addEventListener("keypress", function (e) {
+inputBox.addEventListener("keypress", function (e) {  //enter button works when adding tasks
   if (e.key === "Enter")  {
     addTask();
   }
